@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">KancaUMKM</string>
+
+    <string-array name="carousel_titles">
+        <item>Buat Tokomu Untuk Mengembangkan Bisnismu</item>
+        <item>Temukan Produk UMKM dengan Promo dan Diskon</item>
+        <item>UMKM dengan Prospek Menarik untuk Investasimu</item>
+    </string-array>
+
+    <string-array name="carousel_subtitles">
+        <item>Sebagai pelaku UMKM, daftarkan tokomu dan  dapatkan bimbingan  pengembangan bisnismu.</item>
+        <item>Sebagai konsumen, temukan  produk UMKM dengan  penawaran diskon  promo yang menarik.</item>
+        <item>Sebagai investor, temukan pelaku UMKM dengan prospek yang menjanjikan untuk investasimu.</item>
+    </string-array>
+
+    <array name="carousel_drawables">
+        <item>@drawable/iv_onboarding_1</item>
+        <item>@drawable/iv_onboarding_2</item>
+        <item>@drawable/iv_onboarding_3</item>
+    </array>
+
+    <string name="btn_get_started">Get Started</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register">Register</string>
+
+    <string name="to_login_alternate">Already have an account?</string>
+    <string name="to_register_alternate">Dont have any account?</string>
+    <string name="btn_skip">Skip</string>
 </resources>
