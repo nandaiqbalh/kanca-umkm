@@ -22,12 +22,6 @@ class SplashscreenActivity : AppCompatActivity() {
 		_binding = ActivitySplashscreenBinding.inflate(layoutInflater)
 		setContentView(binding.root)
 
-		// Animasi zoom in untuk tv_app_name
-		val zoomInAnimationName = ScaleAnimation(0f, 1f, 0f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
-		zoomInAnimationName.duration = 700 // Sesuaikan durasi animasi
-		binding.tvAppName.startAnimation(zoomInAnimationName)
-		binding.tvAppName.visibility = View.VISIBLE
-
 		// Animasi zoom in untuk iv_app_logo
 		val zoomInAnimationLogo = ScaleAnimation(0f, 1f, 0f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f)
 		zoomInAnimationLogo.duration = 700 // Sesuaikan durasi animasi

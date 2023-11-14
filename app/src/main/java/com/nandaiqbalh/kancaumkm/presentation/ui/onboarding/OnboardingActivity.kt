@@ -5,9 +5,10 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.nandaiqbalh.kancaumkm.MainActivity
+import com.nandaiqbalh.kancaumkm.presentation.ui.home.MainActivity
 import com.nandaiqbalh.kancaumkm.R
 import com.nandaiqbalh.kancaumkm.databinding.ActivityOnboardingBinding
+import com.nandaiqbalh.kancaumkm.presentation.ui.auth.login.LoginActivity
 import com.nandaiqbalh.kancaumkm.presentation.ui.onboarding.carouselview.CarouselPage
 import com.nandaiqbalh.kancaumkm.presentation.ui.onboarding.carouselview.CarouselPager
 import com.nandaiqbalh.kancaumkm.presentation.ui.onboarding.carouselview.ZoomOutPageTransformer
@@ -48,7 +49,7 @@ class OnboardingActivity : AppCompatActivity(), CarouselPager.CarouselListener {
 		lifecycleScope.launchWhenCreated {
 			viewModel.getStatusOnboarding().observe(this@OnboardingActivity) { isOnboardingCompleted ->
 				if (isOnboardingCompleted == true) {
-					val intent = Intent(this@OnboardingActivity, MainActivity::class.java)
+					val intent = Intent(this@OnboardingActivity, LoginActivity::class.java)
 					startActivity(intent)
 					finishAffinity()
 				}

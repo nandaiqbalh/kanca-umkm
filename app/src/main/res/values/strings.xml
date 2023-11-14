@@ -19,11 +19,22 @@
         <item>@drawable/iv_onboarding_3</item>
     </array>
 
-    <string name="btn_get_started">Get Started</string>
-    <string name="btn_login">Login</string>
-    <string name="btn_register">Register</string>
+    <string name="btn_get_started">Mulai Aktivitas</string>
+    <string name="btn_login">Masuk</string>
+    <string name="btn_register">Daftar</string>
 
-    <string name="to_login_alternate">Already have an account?</string>
-    <string name="to_register_alternate">Dont have any account?</string>
-    <string name="btn_skip">Skip</string>
+    <string name="to_login_alternate">Sudah memiliki akun?</string>
+    <string name="to_register_alternate">Belum memiliki akun?</string>
+    <string name="btn_skip">Lewati</string>
+
+    <string name="tv_login_title">Masuk</string>
+    <string name="tv_login_subtitle">Masuk dan mulai raup keuntunganmu</string>
+    <string name="tv_register_title">Buat akun.</string>
+    <string name="tv_register_subtitle">Daftarkan dirimu dan penuhi kebutuhanmu</string>
+
+    <string name="tv_hint_email">Silahkan masukkan emailmu</string>
+    <string name="tv_hint_password">Silahkan masukkan passwordmu</string>
+    <string name="tv_hint_confirm_password">Silahkan konfrimasi passwordmu</string>
+
+
 </resources>
