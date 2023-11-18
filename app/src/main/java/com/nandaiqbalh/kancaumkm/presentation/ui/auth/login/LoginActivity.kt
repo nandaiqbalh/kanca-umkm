@@ -24,8 +24,6 @@ class LoginActivity : AppCompatActivity() {
 		_binding = ActivityLoginBinding.inflate(layoutInflater)
 		setContentView(binding.root)
 
-		setupSpinner()
-
 		buttonClickListener()
 
 		playAnimation()
@@ -39,16 +37,6 @@ class LoginActivity : AppCompatActivity() {
 		}
 	}
 
-	private fun setupSpinner(){
-		val spinnerRole = findViewById<Spinner>(R.id.spinnerRole)
-
-		val roles = arrayOf("Pembeli", "Pelaku UMKM")
-
-		val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, roles)
-
-		spinnerRole.adapter = adapter
-	}
-
 	private fun playAnimation() {
 
 		val logo = ObjectAnimator.ofFloat(binding.ivLogoSmall, View.ALPHA, 1f).setDuration(500)
@@ -59,15 +47,6 @@ class LoginActivity : AppCompatActivity() {
 		val buttonLogin = ObjectAnimator.ofFloat(binding.btnLogin, View.ALPHA, 1f).setDuration(500)
 		val llLoginAlternate = ObjectAnimator.ofFloat(binding.llLoginAlternate, View.ALPHA, 1f).setDuration(500)
 
-		val spinnerRole = binding.spinnerRole
-		val childViews = mutableListOf<Animator>()
-
-		// Iterate over the child views of the Spinner and animate their alpha
-		for (i in 0 until spinnerRole.childCount) {
-			val child = spinnerRole.getChildAt(i)
-			val animator = ObjectAnimator.ofFloat(child, View.ALPHA, 1f).setDuration(500)
-			childViews.add(animator)
-		}
 
 		val together = AnimatorSet().apply {
 			playTogether(tvTitle, tvMessage)
@@ -82,7 +61,6 @@ class LoginActivity : AppCompatActivity() {
 				llLoginAlternate,
 				together
 			)
-			playTogether(childViews)  // Include child views in the animation set
 			startDelay = 500
 		}.start()
 	}

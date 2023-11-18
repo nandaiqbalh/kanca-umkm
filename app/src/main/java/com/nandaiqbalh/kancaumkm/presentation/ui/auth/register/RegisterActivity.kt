@@ -21,7 +21,6 @@ class RegisterActivity : AppCompatActivity() {
 
 		buttonClickListener()
 
-		setupSpinner()
 	}
 
 	private fun buttonClickListener(){
@@ -30,16 +29,6 @@ class RegisterActivity : AppCompatActivity() {
 			startActivity(intent)
 			finishAffinity()
 		}
-	}
-
-	private fun setupSpinner(){
-		val spinnerRole = findViewById<Spinner>(R.id.spinnerRole)
-
-		val roles = arrayOf("Pembeli", "Pelaku UMKM")
-
-		val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, roles)
-
-		spinnerRole.adapter = adapter
 	}
 
 	override fun onDestroy() {

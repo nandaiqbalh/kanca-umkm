@@ -2,15 +2,15 @@
     <string name="app_name">KancaUMKM</string>
 
     <string-array name="carousel_titles">
-        <item>Buat Tokomu Untuk Mengembangkan Bisnismu</item>
-        <item>Temukan Produk UMKM dengan Promo dan Diskon</item>
-        <item>UMKM dengan Prospek Menarik untuk Investasimu</item>
+        <item>Buat tokomu untuk mengembangkan bisnismu</item>
+        <item>Temukan produk UMKM dengan promo dan diskon</item>
+        <item>Kreator untuk membantu digitalisasi produkmu</item>
     </string-array>
 
     <string-array name="carousel_subtitles">
-        <item>Sebagai pelaku UMKM, daftarkan tokomu dan  dapatkan bimbingan  pengembangan bisnismu.</item>
-        <item>Sebagai konsumen, temukan  produk UMKM dengan  penawaran diskon  promo yang menarik.</item>
-        <item>Sebagai investor, temukan pelaku UMKM dengan prospek yang menjanjikan untuk investasimu.</item>
+        <item>Sebagai pelaku UMKM, daftarkan tokomu dan  dapatkan bimbingan  pengembangan bisnismu!</item>
+        <item>Sebagai konsumen, temukan  produk UMKM dengan  penawaran diskon  promo yang menarik!</item>
+        <item>Sebagai kreator, temukan klien potensial yang memerlukan kreativitasmu!</item>
     </string-array>
 
     <array name="carousel_drawables">
@@ -19,7 +19,7 @@
         <item>@drawable/iv_onboarding_3</item>
     </array>
 
-    <string name="btn_get_started">Mulai Aktivitas</string>
+    <string name="btn_get_started">Mulai Sekarang</string>
     <string name="btn_login">Masuk</string>
     <string name="btn_register">Daftar</string>
 
@@ -29,7 +29,7 @@
 
     <string name="tv_login_title">Masuk</string>
     <string name="tv_login_subtitle">Masuk dan mulai raup keuntunganmu</string>
-    <string name="tv_register_title">Buat akun.</string>
+    <string name="tv_register_title">Daftar</string>
     <string name="tv_register_subtitle">Daftarkan dirimu dan penuhi kebutuhanmu</string>
 
     <string name="tv_hint_email">Silahkan masukkan emailmu</string>

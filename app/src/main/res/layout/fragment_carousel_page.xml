@@ -9,10 +9,10 @@
         android:id="@+id/carouselPageImage"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/carouselPageTitle"
         tools:src="@drawable/iv_onboarding_1" />
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/jakartasans_semibold"
         android:gravity="center"
@@ -28,7 +28,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/carouselPageImage"
+        app:layout_constraintBottom_toTopOf="@id/carouselPageText"
         tools:text="This is the title" />
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="196dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/jakartasans_regular"
         android:gravity="center"
@@ -44,7 +44,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/carouselPageTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:text="This is the text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
