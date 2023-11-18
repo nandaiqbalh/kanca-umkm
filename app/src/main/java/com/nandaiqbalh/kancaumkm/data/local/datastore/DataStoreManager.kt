@@ -22,15 +22,23 @@ class DataStoreManager(@ApplicationContext private val context: Context) {
 		}
 	}
 
-	suspend fun saveCredentials(username: String, password: String) {
+	val getStatusLogin: Flow<Boolean> = context.dataStore.data.map {
+		it[STATUS_LOGIN_KEY] ?: false
+	}
+	suspend fun setStatusLogin(status: Boolean) {
 		context.dataStore.edit {
-			it[USERNAME_KEY] = username
+			it[STATUS_LOGIN_KEY] = status
+		}
+	}
+	suspend fun saveCredentials(email: String, password: String) {
+		context.dataStore.edit {
+			it[EMAIL_KEY] = email
 			it[PASSWORD_KEY] = password
 		}
 	}
 
-	suspend fun getSavedCredentials(): Flow<Pair<String?, String?>> {
-		val usernameFlow = context.dataStore.data.map { it[USERNAME_KEY] }
+	fun getSavedCredentials(): Flow<Pair<String?, String?>> {
+		val usernameFlow = context.dataStore.data.map { it[EMAIL_KEY] }
 		val passwordFlow = context.dataStore.data.map { it[PASSWORD_KEY] }
 
 		return usernameFlow.combine(passwordFlow) { username, password ->
@@ -47,7 +55,8 @@ class DataStoreManager(@ApplicationContext private val context: Context) {
 	companion object {
 		private const val DATASTORE_NAME = "datastore_preferences"
 		private val STATUS_ONBOARDING_KEY = booleanPreferencesKey("status_onboarding_key")
-		private val USERNAME_KEY = stringPreferencesKey("username_key")
+		private val STATUS_LOGIN_KEY = booleanPreferencesKey("status_login_key")
+		private val EMAIL_KEY = stringPreferencesKey("email_key")
 		private val PASSWORD_KEY = stringPreferencesKey("password_key")
 		private val Context.dataStore by preferencesDataStore(
 			name = DATASTORE_NAME

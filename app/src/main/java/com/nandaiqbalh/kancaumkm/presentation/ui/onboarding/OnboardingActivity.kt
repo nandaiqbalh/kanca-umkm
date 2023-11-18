@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.nandaiqbalh.kancaumkm.presentation.ui.home.MainActivity
 import com.nandaiqbalh.kancaumkm.R
 import com.nandaiqbalh.kancaumkm.databinding.ActivityOnboardingBinding
 import com.nandaiqbalh.kancaumkm.presentation.ui.auth.login.LoginActivity
@@ -18,11 +17,13 @@ import dagger.hilt.android.AndroidEntryPoint
 class OnboardingActivity : AppCompatActivity(), CarouselPager.CarouselListener {
 
 	private val viewModel: OnboardingViewModel by viewModels()
-	private lateinit var binding: ActivityOnboardingBinding
+
+	private var _binding : ActivityOnboardingBinding? = null
+	private val binding get() = _binding!!
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		binding = ActivityOnboardingBinding.inflate(layoutInflater)
+		_binding = ActivityOnboardingBinding.inflate(layoutInflater)
 		setContentView(binding.root)
 
 		isAlreadyOnboarding()
@@ -60,5 +61,10 @@ class OnboardingActivity : AppCompatActivity(), CarouselPager.CarouselListener {
 	override fun onCarouselFinished(skipped: Boolean) {
 		// set status on boarding
 		viewModel.setStatusOnboarding(true)
+	}
+
+	override fun onDestroy() {
+		super.onDestroy()
+		_binding = null
 	}
 }

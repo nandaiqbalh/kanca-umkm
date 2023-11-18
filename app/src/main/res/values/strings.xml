@@ -36,5 +36,8 @@
     <string name="tv_hint_password">Silahkan masukkan passwordmu</string>
     <string name="tv_hint_confirm_password">Silahkan konfrimasi passwordmu</string>
 
+    <string name="tv_error_input_blank">Field ini tidak boleh kosong!</string>
+    <string name="tv_error_password_mismatch">Konfirmasi password tidak cocok!</string>
+
 
 </resources>
