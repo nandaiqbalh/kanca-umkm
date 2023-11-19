@@ -39,5 +39,11 @@
     <string name="tv_error_input_blank">Field ini tidak boleh kosong!</string>
     <string name="tv_error_password_mismatch">Konfirmasi password tidak cocok!</string>
 
+    <string name="tv_pembeli_title_home">Beranda</string>
+    <string name="tv_pembeli_title_premium">Toko Premium</string>
+    <string name="tv_pembeli_title_riwayat">Riwayat</string>
+    <string name="tv_pembeli_title_profil">Profil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

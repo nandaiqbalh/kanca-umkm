@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_pembeli_nav_graph"
+    app:startDestination="@id/pembeliBerandaFragment">
+
+    <fragment
+        android:id="@+id/pembeliBerandaFragment"
+        android:name="com.nandaiqbalh.kancaumkm.presentation.ui.home.pembeli.beranda.PembeliBerandaFragment"
+        android:label="fragment_pembeli_beranda"
+        tools:layout="@layout/fragment_pembeli_beranda"
+        >
+        <action
+            android:id="@+id/action_pembeliBerandaFragment_to_pembeliTokoPremiumFragment"
+            app:destination="@id/pembeliTokoPremiumFragment" />
+        <action
+            android:id="@+id/action_pembeliBerandaFragment_to_pembeliRiwayatFragment"
+            app:destination="@id/pembeliRiwayatFragment" />
+        <action
+            android:id="@+id/action_pembeliBerandaFragment_to_pembeliProfilFragment"
+            app:destination="@id/pembeliProfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pembeliProfilFragment"
+        android:name="com.nandaiqbalh.kancaumkm.presentation.ui.home.pembeli.profil.PembeliProfilFragment"
+        android:label="fragment_pembeli_profil"
+        tools:layout="@layout/fragment_pembeli_profil" >
+        <action
+            android:id="@+id/action_pembeliProfilFragment_to_pembeliRiwayatFragment"
+            app:destination="@id/pembeliRiwayatFragment" />
+        <action
+            android:id="@+id/action_pembeliProfilFragment_to_pembeliTokoPremiumFragment"
+            app:destination="@id/pembeliTokoPremiumFragment" />
+        <action
+            android:id="@+id/action_pembeliProfilFragment_to_pembeliBerandaFragment"
+            app:destination="@id/pembeliBerandaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pembeliRiwayatFragment"
+        android:name="com.nandaiqbalh.kancaumkm.presentation.ui.home.pembeli.riwayat.PembeliRiwayatFragment"
+        android:label="fragment_pembeli_riwayat"
+        tools:layout="@layout/fragment_pembeli_riwayat" >
+        <action
+            android:id="@+id/action_pembeliRiwayatFragment_to_pembeliBerandaFragment"
+            app:destination="@id/pembeliBerandaFragment" />
+        <action
+            android:id="@+id/action_pembeliRiwayatFragment_to_pembeliTokoPremiumFragment"
+            app:destination="@id/pembeliTokoPremiumFragment" />
+        <action
+            android:id="@+id/action_pembeliRiwayatFragment_to_pembeliProfilFragment"
+            app:destination="@id/pembeliProfilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pembeliTokoPremiumFragment"
+        android:name="com.nandaiqbalh.kancaumkm.presentation.ui.home.pembeli.premium.PembeliTokoPremiumFragment"
+        android:label="fragment_pembeli_toko_premium"
+        tools:layout="@layout/fragment_pembeli_toko_premium" >
+        <action
+            android:id="@+id/action_pembeliTokoPremiumFragment_to_pembeliBerandaFragment"
+            app:destination="@id/pembeliBerandaFragment" />
+        <action
+            android:id="@+id/action_pembeliTokoPremiumFragment_to_pembeliRiwayatFragment"
+            app:destination="@id/pembeliRiwayatFragment" />
+        <action
+            android:id="@+id/action_pembeliTokoPremiumFragment_to_pembeliProfilFragment"
+            app:destination="@id/pembeliProfilFragment" />
+    </fragment>
+</navigation>

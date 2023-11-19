@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/pembeliBerandaFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_pembeli_selector_home"
+        android:title="@string/tv_pembeli_title_home"/>
+    <item
+        android:id="@+id/pembeliTokoPremiumFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_pembeli_selector_premium"
+        android:title="@string/tv_pembeli_title_premium"/>
+
+    <item
+        android:id="@+id/pembeliRiwayatFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_pembeli_selector_riwayat"
+        android:title="@string/tv_pembeli_title_riwayat"/>
+
+    <item
+        android:id="@+id/pembeliProfilFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_pembeli_selector_profile"
+        android:title="@string/tv_pembeli_title_profil"/>
+</menu>
