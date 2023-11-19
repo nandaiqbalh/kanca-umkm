@@ -2,6 +2,7 @@ package com.nandaiqbalh.kancaumkm.presentation.ui.auth.register
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import com.nandaiqbalh.kancaumkm.databinding.ActivityRegisterBinding
 import com.nandaiqbalh.kancaumkm.presentation.ui.auth.login.LoginActivity
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class RegisterActivity : AppCompatActivity() {
 
@@ -39,29 +41,31 @@ class RegisterActivity : AppCompatActivity() {
 
 			setLoading(true)
 
-			if (validateForm()){
+			val email = binding.edRegisterEmail.text.toString().trim()
+			val password = binding.edRegisterPassword.text.toString().trim()
 
-				val email = binding.edRegisterEmail.text.toString().trim()
-				val password = binding.edRegisterPassword.text.toString().trim()
+			// Menggunakan Handler untuk menambahkan delay 2 detik sebelum mendapatkan respon
+			Handler().postDelayed({
 
-				viewModel.saveCredential(email, password)
+				if (validateForm()) {
+					viewModel.saveCredential(email, password)
 
-				Toast.makeText(this, "Pendaftaran berhasil!", Toast.LENGTH_SHORT).show()
+					// Setelah delay, Anda dapat melanjutkan dengan menampilkan pesan dan berpindah ke aktivitas login
+					Toast.makeText(this, "Pendaftaran berhasil!", Toast.LENGTH_SHORT).show()
 
-				val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
-				startActivity(intent)
-				finishAffinity()
+					val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+					startActivity(intent)
+					finishAffinity()
+				} else {
+					// Jika validasi tidak berhasil, tampilkan pesan tidak valid
+					Toast.makeText(this, "Pendaftaran tidak valid!", Toast.LENGTH_SHORT).show()
+				}
 
 				setLoading(false)
 
-			} else {
-				setLoading(false)
-
-				Toast.makeText(this, "Pendaftaran tidak valid!", Toast.LENGTH_SHORT).show()
-
-			}
-
+			}, 2000) // Delay 2 detik (2000 milidetik)
 		}
+
 	}
 
 	private fun validateForm(): Boolean {

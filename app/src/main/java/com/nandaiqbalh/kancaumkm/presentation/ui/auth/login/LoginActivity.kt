@@ -4,6 +4,7 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -16,6 +17,7 @@ import com.nandaiqbalh.kancaumkm.presentation.ui.home.pembeli.PembeliActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 
+@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
 
@@ -66,28 +68,32 @@ class LoginActivity : AppCompatActivity() {
 					val savedEmail = savedCredentials.first ?: ""
 					val savedPassword = savedCredentials.second ?: ""
 
-					if (enteredEmail == savedEmail && enteredPassword == savedPassword) {
-						val intent = Intent(this@LoginActivity, PembeliActivity::class.java)
-						startActivity(intent)
-						finishAffinity()
+					// Menggunakan Handler untuk menambahkan delay 2 detik
+					Handler().postDelayed({
 
-						viewModel.setStatusLogin(true)
+						if (enteredEmail == savedEmail && enteredPassword == savedPassword) {
+							val intent = Intent(this@LoginActivity, PembeliActivity::class.java)
+							startActivity(intent)
+							finishAffinity()
 
-						setLoading(false)
-					} else {
+							viewModel.setStatusLogin(true)
 
-						Toast.makeText(
-							this@LoginActivity,
-							"Invalid credentials",
-							Toast.LENGTH_SHORT
-						).show()
+							setLoading(false)
+						} else {
+							Toast.makeText(
+								this@LoginActivity,
+								"Invalid credentials",
+								Toast.LENGTH_SHORT
+							).show()
 
-						setLoading(false)
+							setLoading(false)
+						}
 
-					}
+					}, 2000) // Delay 2 detik (2000 milidetik)
 				}
 			}
 		}
+
 	}
 
 	private fun validateForm(): Boolean {
