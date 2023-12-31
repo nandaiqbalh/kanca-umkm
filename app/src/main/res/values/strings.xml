@@ -46,6 +46,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_hello">Hello!</string>
+    <string name="tv_kategori">Kategori</string>
+    <string name="tv_kerajinan">Kerajinan</string>
+    <string name="tv_pakaian">Pakaian</string>
+    <string name="tv_promo">Promo</string>
+    <string name="tv_sepatu">Sepatu</string>
+    <string name="tv_pot_tanaman">Pot Tanaman</string>
+    <string name="lihat_semua">Lihat Semua</string>
+    <string name="tv_alat_tulis">Alat Tulis</string>
+    <string name="tv_produk_umkm">Produk UMKM</string>
 
 
     <string-array name="id">
