@@ -45,5 +45,30 @@
     <string name="tv_pembeli_title_profil">Profil</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_hello">Hello!</string>
+
+
+    <string-array name="id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="gambar_product">
+        <item>@drawable/ic_product_1</item>
+        <item>@drawable/ic_product_2</item>
+        <item>@drawable/ic_product_3</item>
+        <item>@drawable/ic_product_4</item>
+        <item>@drawable/ic_product_5</item>
+        <item>@drawable/ic_product_6</item>
+        <item>@drawable/ic_product_7</item>
+        <item>@drawable/ic_product_8</item>
+
+    </string-array>
 
 </resources>
