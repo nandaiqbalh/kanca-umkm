@@ -56,6 +56,10 @@
     <string name="tv_alat_tulis">Alat Tulis</string>
     <string name="tv_produk_umkm">Produk UMKM</string>
     <string name="tv_toko_premium">Toko Premium</string>
+    <string name="tv_cari_riwayat_transaksi">Cari riwayat transaksi</string>
+    <string name="tv_riwayat_transaksi">Riwayat Transaksi</string>
+    <string name="tv_semua_status">Semua Status</string>
+    <string name="tv_terapkan_filter">Terapkan Filter</string>
 
 
     <string-array name="id">
@@ -114,5 +118,55 @@
         <item>Iqbal Art, Kulon Progo</item>
     </string-array>
 
+
+    <string-array name="id_riwayat">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+
+    </string-array>
+
+    <string-array name="gambar_product_riwayat">
+        <item>@drawable/ic_product_5</item>
+        <item>@drawable/ic_product_6</item>
+        <item>@drawable/ic_product_7</item>
+        <item>@drawable/ic_product_8</item>
+    </string-array>
+
+    <string-array name="namaProduk_riwayat">
+        <item>Pot Bunga</item>
+        <item>Kemeja Pria Polkadot</item>
+        <item>Sepatu Olahraga Pria</item>
+        <item>Kaktus Hias</item>
+    </string-array>
+
+    <string-array name="hargaProduk_riwayat">
+        <item>25000</item>
+        <item>19000</item>
+        <item>19000</item>
+        <item>20000</item>
+    </string-array>
+
+    <string-array name="tanggalProduk_riwayat">
+        <item>20 Desember 2023</item>
+        <item>1 Januari 2024</item>
+        <item>19 Desember 2023</item>
+        <item>13 Mei 2023</item>
+    </string-array>
+
+    <string-array name="statusProduk_riwayat">
+        <item>Berhasil</item>
+        <item>Gagal</item>
+        <item>Berhasil</item>
+        <item>Berhasil</item>
+    </string-array>
+
+    <string-array name="kuantitasProduk_riwayat">
+        <item>1 barang</item>
+        <item>2 barang</item>
+        <item>1 barang</item>
+        <item>1 barang</item>
+    </string-array>
 
 </resources>

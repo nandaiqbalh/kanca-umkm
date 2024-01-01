@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/jakartasans_semibold"
                 tools:text="Test"
-                android:textColor="@color/primary"
+                android:textColor="@color/black_500"
                 android:textSize="18sp" />
 
             <TextView
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/jakartasans_regular"
                 tools:text="test"
-                android:textColor="@color/primary"
+                android:textColor="@color/black_500"
                 android:textSize="14sp" />
 
             <LinearLayout
