@@ -55,6 +55,7 @@
     <string name="lihat_semua">Lihat Semua</string>
     <string name="tv_alat_tulis">Alat Tulis</string>
     <string name="tv_produk_umkm">Produk UMKM</string>
+    <string name="tv_toko_premium">Toko Premium</string>
 
 
     <string-array name="id">
@@ -79,5 +80,39 @@
         <item>@drawable/ic_product_8</item>
 
     </string-array>
+
+    <string-array name="namaProduk">
+        <item>Topi Sulam Bentuk Hewan</item>
+        <item>Pot Bunga Gantung</item>
+        <item>Gelang Kerang</item>
+        <item>Sepatu Enceng Gondok</item>
+        <item>Pot Bunga</item>
+        <item>Kemeja Pria Polkadot</item>
+        <item>Sepatu Olahraga Pria</item>
+        <item>Kaktus Hias</item>
+    </string-array>
+
+    <string-array name="hargaProduk">
+        <item>11000</item>
+        <item>20000</item>
+        <item>14000</item>
+        <item>14000</item>
+        <item>25000</item>
+        <item>19000</item>
+        <item>19000</item>
+        <item>20000</item>
+    </string-array>
+
+    <string-array name="lokasiProduk">
+        <item>Toko Bu Khanuun, Semarang.</item>
+        <item>Khanuun Art, Semarang.</item>
+        <item>Toko Bu Maulida, Jepara</item>
+        <item>Toko Pak Hasyim, Jepara</item>
+        <item>Toko Puspita, Prambanan</item>
+        <item>Toko Nanda, Semarang</item>
+        <item>Nanda Sport, Semarang</item>
+        <item>Iqbal Art, Kulon Progo</item>
+    </string-array>
+
 
 </resources>
