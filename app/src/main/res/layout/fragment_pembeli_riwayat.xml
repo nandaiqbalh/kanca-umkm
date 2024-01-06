@@ -56,6 +56,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginTop="16dp"
                 android:gravity="center"
+                android:textSize="14sp"
                 android:text="@string/tv_terapkan_filter"
                 android:textAllCaps="true"
                 android:textColor="@color/primary"

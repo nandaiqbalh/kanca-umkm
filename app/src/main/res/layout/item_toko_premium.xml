@@ -25,31 +25,36 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_toko_premium"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/item_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
                 android:fontFamily="@font/jakartasans_semibold"
-                tools:text="Test"
+                android:maxLines="1"
                 android:textColor="@color/black_500"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:text="Teks yang sangat panjang sehingga melebihi batas panjang yang ditentukan" />
 
             <TextView
                 android:id="@+id/item_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/jakartasans_regular"
-                tools:text="test"
                 android:textColor="@color/black_500"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:text="test" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -64,10 +69,13 @@
                     android:layout_height="24dp"
                     android:src="@drawable/ic_pembeli_premium_inactive"
                     tools:ignore="ImageContrastCheck" />
+
                 <TextView
                     android:id="@+id/item_location"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
                     android:fontFamily="@font/jakartasans_regular"
                     android:text="Semarang"
                     android:textColor="@color/black_200"
