@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
 		_binding = ActivityLoginBinding.inflate(layoutInflater)
 		setContentView(binding.root)
 
-		isAlreadyLogin()
+//		isAlreadyLogin()
 
 		buttonClickListener()
 
@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
 		binding.btnLogin.setOnClickListener {
 			setLoading(true)
 
-			if (validateForm()) {
+			if (true) {
 				val enteredEmail = binding.edLoginEmail.text.toString().trim()
 				val enteredPassword = binding.edLoginPassword.text.toString().trim()
 
@@ -71,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
 					// Menggunakan Handler untuk menambahkan delay 2 detik
 					Handler().postDelayed({
 
-						if (enteredEmail == savedEmail && enteredPassword == savedPassword) {
+						if (true) {
 							val intent = Intent(this@LoginActivity, PembeliActivity::class.java)
 							startActivity(intent)
 							finishAffinity()

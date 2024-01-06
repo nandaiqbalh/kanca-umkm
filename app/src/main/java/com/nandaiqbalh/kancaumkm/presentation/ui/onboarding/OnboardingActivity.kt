@@ -49,18 +49,18 @@ class OnboardingActivity : AppCompatActivity(), CarouselPager.CarouselListener {
 	private fun isAlreadyOnboarding() {
 		lifecycleScope.launchWhenCreated {
 			viewModel.getStatusOnboarding().observe(this@OnboardingActivity) { isOnboardingCompleted ->
-				if (isOnboardingCompleted == true) {
-					val intent = Intent(this@OnboardingActivity, LoginActivity::class.java)
-					startActivity(intent)
-					finishAffinity()
-				}
+//				if (true) {
+//					val intent = Intent(this@OnboardingActivity, LoginActivity::class.java)
+//					startActivity(intent)
+//					finishAffinity()
+//				}
 			}
 		}
 	}
 
 	override fun onCarouselFinished(skipped: Boolean) {
 		// set status on boarding
-		viewModel.setStatusOnboarding(true)
+//		viewModel.setStatusOnboarding(true)
 	}
 
 	override fun onDestroy() {

@@ -1,6 +1,7 @@
 package com.nandaiqbalh.kancaumkm.presentation.ui.onboarding.carouselview
 
 import android.content.Context
+import android.content.Intent
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nandaiqbalh.kancaumkm.R
 import com.nandaiqbalh.kancaumkm.databinding.CarouselPagerBinding
+import com.nandaiqbalh.kancaumkm.presentation.ui.auth.login.LoginActivity
 
 class CarouselPager @JvmOverloads constructor(
     context: Context, attributeSet: AttributeSet? = null, defStyleAttr: Int = 0
@@ -29,7 +31,9 @@ class CarouselPager @JvmOverloads constructor(
 
     private fun setUpListeners() = with(binding) {
         btnGetStarted.setOnClickListener {
-            carouselListener?.onCarouselFinished()
+//            carouselListener?.onCarouselFinished()
+            val intent = Intent(context, LoginActivity::class.java)
+            context.startActivity(intent)
         }
 
         btnSkip.setOnClickListener {
